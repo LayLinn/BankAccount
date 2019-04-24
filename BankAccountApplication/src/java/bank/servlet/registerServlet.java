@@ -37,7 +37,7 @@ public class registerServlet extends HttpServlet {
                 account.setAccountName(request.getParameter("accountName"));
                 account.setBalance(Integer.parseInt(request.getParameter("balance")));
                 account.setType(request.getParameter("type"));
-                account.setAmount(Integer.parseInt(request.getParameter("amount")));
+                account.setAmount(Double.parseDouble(request.getParameter("amount")));
                 request.setAttribute("bankAccount", account);
                 getServletContext().getRequestDispatcher("/transaction.jsp").forward(request, response);
             } catch (Exception e) {

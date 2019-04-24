@@ -3,7 +3,7 @@ package bank.servlet;
 public class BankAccount {
 
     private String accountID, accountName, type;
-    private int balance, amount;
+    private double balance, amount;
 
     public BankAccount() {
         type = "";
@@ -25,15 +25,15 @@ public class BankAccount {
         this.accountName = accountName;
     }
 
-    public int getBalance() {
+    public double getBalance() {
         return balance;
     }
 
-    public void setBalance(int balance) {
+    public void setBalance(double balance) {
         this.balance = balance;
     }
 
-    public int getCalculatedBalance() {
+    public double getCalculatedBalance() {
         switch (type) {
             case "deposit":
                 return balance + amount;
@@ -44,7 +44,7 @@ public class BankAccount {
         }
     }
 
-    public void setAmount(int amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 
